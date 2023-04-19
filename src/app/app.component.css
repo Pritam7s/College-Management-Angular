@@ -1,0 +1,25 @@
+.navbar-expand{
+    background-color: #b39cd0;
+}
+
+a{
+    color: aliceblue;
+    font-size: larger;
+}
+
+a:active{
+    color: rgb(48, 51, 233);
+}
+
+footer {
+    text-align: center;
+    padding: 2px;
+    background-color: #b39cd0;
+    color: white;
+    position: absolute;
+    height: 57px;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    margin-bottom: -100px;
+  }

@@ -1,0 +1,40 @@
+<h3 style="padding-left: 30px; text-align: center;"><u>Course Details</u></h3>
+<br>
+
+<div class="card">
+
+<form [formGroup]="form">
+    <div class="container">
+        <div for="subid" class="form-group">
+            <label>ID</label>
+            <input class="form-control" disabled value="{{course.subId}}">
+        </div>
+           
+
+        <div for="subname" class="form-group">
+            <label>Name: </label>
+            <input class="form-control" disabled value="{{course.subName}}">
+        </div>
+
+
+        <div for="teachername" class="form-group">
+            <label>Assigned Teacher : </label>
+            <input class="form-control" disabled value="{{course.teacher.firstName}}  {{course.teacher.lastName}}">
+        </div>
+        
+
+        <div for="price" class="form-group">
+            <label>Price: </label>
+            <input class="form-control" disabled value="{{course.price}}">
+        </div>
+        
+
+        <br>
+
+    </div>
+</form>
+
+
+<p><a routerLink="/courses"><button>Back to List</button></a></p>
+
+</div>

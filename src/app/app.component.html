@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div id="app">
+    <nav class="navbar navbar-expand">
+        <i class='fa fa-snowflake-o fa-spin' style="font-size:36px; color: yellow; padding-left: 20px; padding-right: 20px;"></i>
+        <ul class="navbar-nav mr-auto" routerLinkActive="active">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/teachers">Teacher List</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/courses">Course List</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/assignTeacher">Assign Teacher</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<router-outlet></router-outlet>
+
+<footer>
+    <p> Made with ❤ by <a style="color:red" href="https://www.t.me/primo7s" target="_blank">Primo</a> 😉</p>
+</footer>

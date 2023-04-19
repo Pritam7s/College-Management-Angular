@@ -1,0 +1,38 @@
+<h3 style="padding-left: 30px; text-align: center;"><u>Assign Teacher to Course</u></h3>
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div class="container">
+        <div class="form-group">
+            <label>Teacher ID</label>
+            <input formControlName="teachId" type="number" class="form-control" name="tId" id="tId"
+            [(ngModel)]="teacherId">
+        </div>
+        <div *ngIf="f['teachId'].touched && f['teachId'].invalid" class="alert alert-danger">
+            <div *ngIf="f['teachId'].errors && f['teachId'].errors['required']">
+                Teacher ID is Required!!!
+            </div>
+            <div *ngIf="f['teachId'].errors && f['teachId'].errors['minlength']">
+                Minimum Length is 1 for Teacher ID!!!
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <label>Course ID</label>
+            <input formControlName="courseId" type="number" class="form-control" name="cId" id="cId"
+            [(ngModel)]="courseId">
+        </div>
+        <div *ngIf="f['courseId'].touched && f['courseId'].invalid" class="alert alert-danger">
+            <div *ngIf="f['courseId'].errors && f['courseId'].errors['required']">
+                Course ID is Required!!!
+            </div>
+            <div *ngIf="f['courseId'].errors && f['courseId'].errors['minlength']">
+                Minimum Length is 3 for Course ID!!!
+            </div>
+        </div>
+
+        <br>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+</form>

@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h2 style="margin-left: 110px;">Teacher List</h2>
+
+<a class="nav-link" routerLink="/addteacher">
+    <button class="btn btn-success" style="float: right ; margin-right: 30px;">
+        <i class='fa fa-plus'></i>  Add Teacher
+    </button>
+</a>
+
+<div class="container">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <!-- <th>Contact</th>
+            <th>User Name</th>
+            <th>Password</th> -->
+            <th style="text-align: center;" colspan="2">Actions</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let teacher of teachers">
+            <td>{{teacher.id}}</td>
+            <td>{{teacher.firstName}}</td>
+            <td>{{teacher.lastName}}</td>
+            <td>{{teacher.email}}</td>
+            <!-- <td>{{teacher.contact}}</td>
+            <td>{{teacher.userName}}</td>
+            <td>{{teacher.password}}</td> -->
+            <td><button class="btn btn-info" (click)="updateTeacher(teacher.id)"><i class='fa fa-pencil'></i>  Edit</button></td>
+            <td><button class="btn btn-danger" (click)="deleteTeacher(teacher.id)"><a class="nav-link" routerLink="/teachers"><i class='fa fa-trash'></i>   Delete</a></button></td>
+            <td><button class="btn btn-primary" (click)="detailsTeacher(teacher.id)"><i class='fa fa-eye'></i> Details</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+

@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h2 style="margin-left: 110px;">Course List</h2>
+<button class="btn btn-success" style="float: right ; margin-right: 30px;">
+    <a class="nav-link" routerLink="/addcourse">
+        <i class='fa fa-plus'></i>  Add Course
+    </a>
+</button>
+
+<div class="container">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Course Name</th>
+            <th>Price</th>
+            <!-- <th>Teacher Name</th> -->
+            <th style="text-align: center;" colspan="3">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let course of courses">
+            <td>{{course.subId}}</td>
+            <td>{{course.subName}}</td>
+            <td>{{course.price}}</td>
+            <!-- <td>{{course.teacher.firstName}}</td> -->
+            <td><button class="btn btn-info" (click)="updateCourse(course.subId)"><i class='fa fa-pencil'></i>  Edit</button></td>
+            <td><button class="btn btn-danger" (click)="deleteCourseById(course.subId)"><i class='fa fa-trash'></i>  Delete</button></td>
+            <td><button class="btn btn-primary" (click)="detailsCourse(course.subId)" ><i class='fa fa-eye'></i>  Details</button></td>
+
+        </tr>
+    </tbody>
+</table>
+</div>

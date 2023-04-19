@@ -1,0 +1,56 @@
+<h3 style="padding-left: 30px; text-align: center;"><u>Teacher Details</u></h3>
+<br>
+
+<div class="card">
+    
+
+<form  [formGroup]="form">
+    <div class="container">
+    <div class="row">
+        <label class="title">Name : </label>
+    <div for="firstname" class="form-group name1 col-md-6">
+        <input formControlName="firstname" type="text" class="form-control" id="firstname" name="firstName" 
+        [(ngModel)]="teacher.firstName">
+    </div>
+       
+
+    <div for="lastname" class="form-group name2 col-md-6">
+        <input formControlName="lastname" type="text" class="form-control" id="lname" name="lastName" 
+        [(ngModel)]="teacher.lastName">
+    </div>
+    </div>
+
+    <div for="contact" class="form-group">
+        <label class="title">Contact : </label>
+        <input formControlName="contact" type="text" class="form-control" id="contact" name="contact" 
+        [(ngModel)]="teacher.contact">
+    </div>
+    
+    
+    <div for="email" class="form-group">
+        <label class="title">Email : </label>
+        <input formControlName="email" type="text" class="form-control" id="email" name="email" 
+        [(ngModel)]="teacher.email">
+    </div>
+    
+
+    <div for="username" class="form-group">
+        <label class="title">User Name : </label>
+        <input formControlName="username" type="text" class="form-control" id="username" name="userName"  
+        [(ngModel)]="teacher.userName">
+    </div>
+    
+
+    <div for="password" class="form-group">
+        <label class="title">Password : </label>
+        <input formControlName="password" type="text" class="form-control" id="password" name="password" 
+        [(ngModel)]="teacher.password">
+    </div>
+        
+   
+
+</div>
+</form>
+<br>
+<p><a routerLink="/teachers"><button>Back to List</button></a></p>
+</div>
